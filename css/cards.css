@@ -1,0 +1,145 @@
+/* LISTA DE CARTAS
+--------------------------------- */
+ul.card__list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  position: relative;
+}
+
+.card__list li.disappearing {
+  animation: disappear 0.5s forwards;
+  animation-iteration-count: 1;
+}
+
+.card__list li.reappearing {
+  animation: reappear 0.7s forwards;
+  animation-iteration-count: 1;
+}
+
+.card__list li {
+  opacity: 1;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.card {
+  width: 24rem;
+  height: 36rem;
+  perspective: 1000px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  transition: transform 0.25s;
+}
+
+.card:hover,
+.card:focus {
+  transform: translateY(-1.5rem);
+}
+
+.card .front,
+.card .back {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+  transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card .front {
+  background: radial-gradient(
+      circle at 50% 100%,
+      #4e216d80 5%,
+      #4e216d 5% 10%,
+      #4e216d80 10% 15%,
+      #4e216d 15% 20%,
+      #4e216d80 20% 25%,
+      #4e216d 25% 30%,
+      #4e216d80 30% 35%,
+      #4e216d 35% 40%,
+      transparent 40%
+    ),
+    radial-gradient(circle at 100% 50%, #4e216d80 5%, #4e216d 5% 10%, #4e216d80 10% 15%, #4e216d 15% 20%, #4e216d80 20% 25%, #4e216d 25% 30%, #4e216d80 30% 35%, #4e216d 35% 40%, transparent 40%),
+    radial-gradient(circle at 50% 0%, #4e216d80 5%, #4e216d 5% 10%, #4e216d80 10% 15%, #4e216d 15% 20%, #4e216d80 20% 25%, #4e216d 25% 30%, #4e216d80 30% 35%, #4e216d 35% 40%, transparent 40%),
+    radial-gradient(circle at 0 50%, #4e216d80 5%, #4e216d 5% 10%, #4e216d80 10% 15%, #4e216d 15% 20%, #4e216d80 20% 25%, #4e216d 25% 30%, #4e216d80 30% 35%, #4e216d 35% 40%, transparent 40%);
+  background-size: 3em 3em;
+  background-color: #cc8de9;
+  opacity: 1;
+  transform: rotateY(0deg);
+  border: 1rem solid white;
+  outline: 2px solid white;
+  outline-offset: -7px;
+  display: grid;
+  place-items: center;
+}
+
+.card .front:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0.6rem;
+  left: 0.6rem;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  border: 2px solid white;
+}
+
+.card .back {
+  border: 1rem solid white;
+  background-color: #111;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  transform: rotateY(180deg);
+}
+
+.card__list li.c_creatividad .card .back {
+  background-image: url("../images/1.jpg");
+}
+
+.card__list li.c_aprendizaje .card .back {
+  background-image: url("../images/2.jpg");
+}
+
+.card__list li.c_companerismo .card .back {
+  background-image: url("../images/3.jpg");
+}
+
+.card__list li.c_retos .card .back {
+  background-image: url("../images/4.jpg");
+}
+
+.card__list li.c_comunidad .card .back {
+  background-image: url("../images/5.jpg");
+}
+
+.card.is-flipped .front {
+  transform: rotateY(-180deg);
+}
+
+.card.is-flipped .back {
+  transform: rotateY(0deg);
+}
+
+.button {
+  display: block;
+  color: white;
+  font-size: 5rem;
+}
+
+.card.is-flipped:hover .button {
+  animation: float 0.7s ease-in-out infinite;
+}

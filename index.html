@@ -7,7 +7,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/secciones.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/animaciones.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous" />
     <title>#AdoptaUnJunior 2ª convocatoria (Verano 2024) - FRONTEND</title>
   </head>
@@ -16,9 +19,10 @@
       <header>
         <h1>Entraré a formar parte de los equipos de trabajo de <strong>#AdoptaUnJunior?</strong></h1>
         <p>(Elige una carta y clica en <i class="fa fa-chevron-circle-down" aria-hidden="true"></i> para leer más)</p>
+        <button id="shuffleButton" class="shuffle-button">Reparte otra vez</button>
       </header>
       <ul class="card__list">
-        <li>
+        <li class="c_creatividad">
           <div class="card">
             <div class="front"></div>
             <div class="back">
@@ -28,7 +32,7 @@
             </div>
           </div>
         </li>
-        <li>
+        <li class="c_aprendizaje">
           <div class="card">
             <div class="front"></div>
             <div class="back">
@@ -38,7 +42,7 @@
             </div>
           </div>
         </li>
-        <li>
+        <li class="c_companerismo">
           <div class="card">
             <div class="front"></div>
             <div class="back">
@@ -48,7 +52,7 @@
             </div>
           </div>
         </li>
-        <li>
+        <li class="c_retos">
           <div class="card">
             <div class="front"></div>
             <div class="back">
@@ -58,7 +62,7 @@
             </div>
           </div>
         </li>
-        <li>
+        <li class="c_comunidad">
           <div class="card">
             <div class="front"></div>
             <div class="back">
@@ -161,38 +165,7 @@
       </section>
     </section>
 
-    <script>
-      // Manejo de las cartas (que sólo haya una levantada a la vez)
-      document.querySelectorAll(".card").forEach((card) => {
-        card.addEventListener("click", function () {
-          document.querySelectorAll(".card").forEach((c) => c.classList.remove("is-flipped"));
-
-          card.classList.toggle("is-flipped");
-        });
-      });
-
-      // Gestión de las animaciones con IntersectionObserver,
-      // para que se ejecuten cada vez que sus elementos est'en visibles en pantalla
-      document.addEventListener("DOMContentLoaded", function () {
-        const animatedElements = document.querySelectorAll(".animated");
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("in-view");
-              } else {
-                entry.target.classList.remove("in-view");
-              }
-            });
-          },
-          { threshold: 0.5 }
-        );
-
-        animatedElements.forEach((element) => {
-          observer.observe(element);
-        });
-      });
-    </script>
+    <script src="./js/cartas.js"></script>
+    <script src="./js/animaciones.js"></script>
   </body>
 </html>
