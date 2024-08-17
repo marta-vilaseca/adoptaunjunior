@@ -50,4 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
       card.classList.toggle("is-flipped");
     });
   });
+
+  shuffleAndAnimateCards();
 });
