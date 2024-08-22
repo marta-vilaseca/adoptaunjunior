@@ -1,6 +1,49 @@
+h2 {
+  font-size: 20rem;
+  height: 15rem;
+  line-height: 15rem;
+  font-family: "Pridi", serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: lowercase;
+  color: orange;
+  display: flex;
+  flex-grow: 1;
+  justify-content: bottom;
+}
+
+h3 {
+  font-size: 3rem;
+  color: #444;
+  margin-top: 2rem;
+}
+
+.emoji {
+  font-family: "Noto Emoji", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.top-link {
+  background-color: #222;
+  color: snow;
+  padding: 0 3rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  line-height: 5rem;
+  height: 5rem;
+  text-decoration: none;
+  transition: all 100ms ease-in;
+}
+
+.top-link:hover {
+  transform: scale(1.1);
+}
+
 section.main {
   width: 100%;
-  min-height: 100dvh;
+  min-height: 100vh;
   height: 100%;
   position: relative;
   background: snow;
@@ -36,13 +79,11 @@ section.main {
 
     .texto {
       color: #38332d;
-      font-size: 2.6rem;
-      line-height: 4.6rem;
-      max-width: 42ch;
+      font-size: 2rem;
+      line-height: 3.5rem;
     }
 
     a {
-      max-width: 30rem;
       text-align: center;
     }
   }
@@ -349,5 +390,87 @@ section.main {
 
   .emoji.animated.in-view {
     transform: scale(1);
+  }
+}
+
+/* MEDIA QUERIES
+--------------------------- */
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+  section.main aside {
+    display: none;
+  }
+
+  section.main .content {
+    width: 98vw;
+    padding: 2rem;
+  }
+}
+
+/* Media query para tablets */
+@media (601px < width < 1023px) {
+  h2 {
+    font-size: 25rem;
+    height: 15rem;
+    line-height: 15rem;
+  }
+
+  section.main {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 6rem;
+  }
+
+  section.main aside {
+    height: 30vh;
+    position: absolute;
+    top: 4rem;
+    right: 6rem;
+
+    .animation__emoji {
+      transform: scale(0.9);
+    }
+  }
+
+  section.main .content {
+    width: 80vw;
+    height: 60vh;
+    padding: 0 10vw 6rem;
+
+    .texto {
+      font-size: 2.2rem;
+      line-height: 4rem;
+      max-width: 70ch;
+    }
+
+    a {
+      max-width: 30rem;
+      text-align: center;
+      margin-bottom: 6rem;
+    }
+  }
+}
+
+/* Media query para pantallas medianas y superior */
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 30rem;
+    height: 20rem;
+    line-height: 20rem;
+  }
+
+  section.main .content {
+    .texto {
+      font-size: 2.6rem;
+      line-height: 4.6rem;
+      max-width: 42ch;
+    }
+
+    a {
+      max-width: 30rem;
+      text-align: center;
+    }
   }
 }

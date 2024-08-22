@@ -1,10 +1,9 @@
 /* LISTA DE CARTAS
 --------------------------------- */
-ul.card__list {
+.card__list {
   list-style-type: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   position: relative;
@@ -26,8 +25,7 @@ ul.card__list {
 }
 
 .card {
-  width: 24rem;
-  height: 36rem;
+  aspect-ratio: 2 / 3;
   perspective: 1000px;
   text-decoration: none;
   display: block;
@@ -55,7 +53,7 @@ ul.card__list {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 20px;
+  padding: 2rem;
   box-sizing: border-box;
 }
 
@@ -79,7 +77,7 @@ ul.card__list {
   background-color: #cc8de9;
   opacity: 1;
   transform: rotateY(0deg);
-  border: 1rem solid white;
+  border: 0.5rem solid white;
   outline: 2px solid white;
   outline-offset: -7px;
   display: grid;
@@ -144,65 +142,63 @@ ul.card__list {
   animation: float 0.7s ease-in-out infinite;
 }
 
-/* cards.css */
-
-/* Estilos generales para la sección de tarjetas */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  overflow-y: auto;
-  max-height: 80vh; /* Ajusta la altura máxima según sea necesario */
-  padding: 1rem;
-  margin-top: 2rem; /* Añade un margen superior para evitar solapamiento */
-}
+/* MEDIA QUERIES
+--------------------------- */
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 600px) {
-  .cards {
-    flex-direction: column;
+  .card__list {
     align-items: center;
-    margin-top: 1rem; /* Ajusta el margen superior para pantallas pequeñas */
+    margin-top: 1rem;
+    overflow-y: visible; /* Permite el scroll vertical */ /* Ajusta el margen superior para pantallas pequeñas */
+    max-height: 85vh; /* Ajusta la altura máxima según sea necesario */
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 27dvw;
   }
 }
 
-/* Ajusta el contenedor de las tarjetas */
-.card__list {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  position: relative;
-  overflow-y: auto; /* Permite el scroll vertical */
-  max-height: 80vh; /* Ajusta la altura máxima según sea necesario */
-}
+/* Media query para tablets */
+@media (601px < width < 1023px) {
+  .card__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 14rem;
 
-/* Ajusta las tarjetas */
-.card {
-  width: 24rem;
-  height: 36rem;
-  perspective: 1000px;
-  text-decoration: none;
-  display: block;
-  position: relative;
-  transition: transform 0.25s;
+    .front {
+      border: 1rem solid white;
+    }
+  }
 }
 
 /* Media query para pantallas medianas */
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
+  .card__list {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
   .card {
-    width: 20rem;
-    height: 30rem;
+    width: 16rem;
   }
 }
 
-/* Media query para pantallas pequeñas */
-@media (max-width: 600px) {
+/* Media query para pantallas grandes */
+@media (min-width: 1200px) {
   .card {
-    width: 16rem;
-    height: 24rem;
+    width: 20rem;
+
+    .front {
+      border: 1rem solid white;
+    }
+  }
+}
+
+/* Media query para pantallas extragrandes */
+@media (min-width: 1400px) {
+  .card {
+    width: 24rem;
   }
 }
