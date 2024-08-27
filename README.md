@@ -4,7 +4,7 @@
 > **Aspirante:** Marta Vilaseca Foradada
 
 - [Acerca del proyecto](#acerca-del-proyecto)
-- [Sobre mí](#sobre-mí)
+- [Sobre mí](#mi-perfil)
 - [Grupos de trabajo AUJ](#grupos-de-trabajo-auj)
 - [Briefing y checklist](#briefing-y-checklist)
 
@@ -26,7 +26,7 @@ Viene a ser un minijuego de adivinación en realidad, clicas sobre la carta para
 ### Colaboraciones
 
 - [Creé una issue](https://github.com/marta-vilaseca/adoptaunjunior/issues/1) solicitando ayuda para **mejorar el visualizado de la aplicación en pantallas pequeñas**.
-  - **[Sergio](https://github.com/scsanchez)** pudo resolver una parte ([PR](https://github.com/marta-vilaseca/adoptaunjunior/pull/2)), pero la visualización de los distintos apartados con los emojis quedó pendiente; así que por cuestiones de timing terminé de resolver y refactorizar yo la parte que faltaba ([commit](https://github.com/marta-vilaseca/adoptaunjunior/commit/7c5c34b0be2a6e9cef9674c9c675174cc5bdc171))
+  - **[Sergio](https://github.com/scsanchez)** pudo resolver una parte ([su PR](https://github.com/marta-vilaseca/adoptaunjunior/pull/2)), pero la visualización de los distintos apartados con los emojis quedó pendiente; por cuestiones de timing (poder llegar a tiempo a la _deadline_ semanal) terminé de resolver y refactorizar yo la parte que faltaba ([mi commit](https://github.com/marta-vilaseca/adoptaunjunior/commit/7c5c34b0be2a6e9cef9674c9c675174cc5bdc171))
 
 ### Tecnologías, Recursos y Herramientas utilizadas
 
@@ -42,8 +42,8 @@ Viene a ser un minijuego de adivinación en realidad, clicas sobre la carta para
 - [ ] Mejoras a nivel visual:
   - [ ] Mejoras de diseño generales
   - [ ] Sustituir Fork Awesome por otra librería de iconos (_\* dado que recientemente han añadido un aviso conforme está deprecada_)
-  - [ ] animación más compleja para las cartas
-  - [ ] diferenciar un modo claro/oscuro (con style switcher?)
+  - [ ] Animación más compleja para las cartas
+  - [ ] Diferenciar un modo claro/oscuro (con style switcher?)
 - [ ] Añadir un apartado de about: un poco de CV/resume sencillo, skills/stack, enlaces a RRSS...
 
 ---
@@ -63,7 +63,7 @@ No se me ocurre forma mejor de conseguir todo eso que estos grupos de trabajo, d
 **Cinco adjetivos que me describen:** empática, creativa, curiosa, analítica y perseverante.
 **Mis puntos fuertes:** HTML, CSS y diseño de UI. Las ganas de aprender y mejorar constantemente. Adaptabilidad, paciencia, escucha activa. Soy una persona autosuficiente y metódica, me esfuerzo en escribir código ordenado y prestar atención al detalle. Me gusta mucho documentar todo lo que hago.
 
-#### Mi stack
+### Mi stack
 
 **Frontend**: HTML & CSS (SASS, Tailwind, BootStrap), JavaScript, TypeScript, React, Redux
 **Backend**: Node.js, MongoDB
