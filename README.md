@@ -65,11 +65,11 @@ No se me ocurre forma mejor de conseguir todo eso que estos grupos de trabajo, d
 
 ### Mi stack
 
-**Frontend**: HTML & CSS (SASS, Tailwind, BootStrap), JavaScript, TypeScript, React, Redux
-**Backend**: Node.js, MongoDB
+**Frontend**: HTML & CSS (SASS, Tailwind, BootStrap), JavaScript, TypeScript, React, Redux  
+**Backend**: Node.js, MongoDB  
 
-**Metas de aprendizaje (prioritarias):** TDD, UX, Accesibilidad, seguir mejorando en todo lo anterior
-**Metas de aprendizaje (secundarias):** Next.js, Python, Astro...
+**Metas de aprendizaje (prioritarias):** TDD, UX, Accesibilidad, seguir mejorando en todo lo anterior  
+**Metas de aprendizaje (secundarias):** Next.js, Python, Astro...  
 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/martavilaseca/) [![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://x.com/martavilaseca) [![CodePen](https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white)](https://codepen.io/martavilaseca)
 
