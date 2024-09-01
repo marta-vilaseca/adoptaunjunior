@@ -1,6 +1,6 @@
 # 👩🏻‍💻 #AdoptaUnJunior Grupos de Trabajo - II Convocatoria
 
-> **Disciplina:** Frontend
+> **Disciplina:** Frontend  
 > **Aspirante:** Marta Vilaseca Foradada
 
 - [Acerca del proyecto](#acerca-del-proyecto)
